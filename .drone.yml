@@ -13,7 +13,9 @@ steps:
       from_secret: username
     password:
       from_secret: password
-    target: /data/wwwroot/www.lotteryjs.com
-    source: ./docs
+    target: 
+      from_secret: target
+    source: 
+      from_secret: source
     when:
       branch: master
