@@ -6,6 +6,9 @@ steps:
   image: appleboy/drone-scp
   settings:
     host: $host
+    username: $username
+    password: $password
+    port: $port
     target: /data/wwwroot/www.lotteryjs.com
     source: ./docs
     when:
