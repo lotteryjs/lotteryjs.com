@@ -1,0 +1,17 @@
+kind: pipeline
+name: default
+
+steps:
+- name: scp
+  image: appleboy/drone-scp
+  commands:
+    - tar -zcvf release.tar.gz docs
+  settings:
+    host: ${host}
+    username: ${username}
+    password: ${password}
+    port: ${port}
+    target: /data/wwwroot/drone.lotteryjs.com
+    source: release.tar.gz
+    when:
+      branch: master
