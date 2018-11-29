@@ -5,10 +5,10 @@ steps:
 - name: scp
   image: appleboy/drone-scp
   settings:
-    host: $host
-    username: $username
-    password: $password
-    port: $port
+    host: $SCP_HOST
+    username: $SCP_USERNAME
+    password: $SCP_PASSWORD
+    port: $SCP_PORT
     target: /data/wwwroot/www.lotteryjs.com
     source: ./docs
     when:
