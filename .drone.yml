@@ -5,7 +5,8 @@ steps:
 - name: scp
   image: appleboy/drone-scp
   settings:
-    target: /data/wwwroot/drone.lotteryjs.com
+    host: $host
+    target: /data/wwwroot/www.lotteryjs.com
     source: ./docs
     when:
       branch: master
