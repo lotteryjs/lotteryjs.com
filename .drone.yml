@@ -8,7 +8,8 @@ steps:
     host: $SCP_HOST
     username: $SCP_USERNAME
     password: $SCP_PASSWORD
-    secrets: [ SCP_PORT ]
+    port: $SCP_PORT
+    secrets: [ SCP_HOST, SCP_USERNAME, SCP_PASSWORD, SCP_PORT ]
     target: /data/wwwroot/www.lotteryjs.com
     source: ./docs
     when:
