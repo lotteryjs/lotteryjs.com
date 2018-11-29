@@ -5,8 +5,14 @@ steps:
 - name: scp
   image: appleboy/drone-scp
   settings:
-    host: lotteryjs.com
-    secrets: [ ssh_key ]
+    host:
+      from_secret: host
+    port:
+      from_secret: port
+    username:
+      from_secret: username
+    password:
+      from_secret: password
     target: /data/wwwroot/www.lotteryjs.com
     source: ./docs
     when:
