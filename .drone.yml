@@ -1,21 +1,57 @@
 kind: pipeline
-name: default
+name: LOTTERYJS.COM
+
+clone:
+  depth: 50
 
 steps:
-- name: scp
-  image: appleboy/drone-scp
-  settings:
-    host:
-      from_secret: host
-    port:
-      from_secret: port
-    username:
-      from_secret: username
-    password:
-      from_secret: password
-    target: 
-      from_secret: target
-    source: 
-      from_secret: source
-    when:
-      branch: master
+  - name: fetch
+    image: docker:git
+    commands:
+      - git fetch --tags
+  
+  - name: publish
+    image: plugins/docker:17.12
+    settings:
+      repo: lotteryjs/lotteryjs.com
+      auto_tag: true
+      dockerfile: Dockerfile
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+        
+  - name: scp
+    image: appleboy/drone-scp
+    settings:
+      host:
+        from_secret: host
+      port:
+        from_secret: port
+      username:
+        from_secret: username
+      password:
+        from_secret: password
+      target: /data/wwwroot/lotteryjs
+      source: docker-compose.yml
+
+  - name: ssh
+    image: appleboy/drone-ssh
+    pull: true
+    settings:
+      host:
+        from_secret: host
+      port:
+        from_secret: port
+      username:
+        from_secret: username
+      password:
+        from_secret: password
+      script:
+        - docker-compose pull lotteryjs.com
+        - docker-compose up -d --force-recreate --no-deps lotteryjs.com
+        - docker images --quiet --filter=dangling=true | xargs --no-run-if-empty docker rmi -f
+  
+trigger:
+  event:
+    - tag
