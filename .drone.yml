@@ -5,12 +5,12 @@ clone:
   depth: 50
 
 steps:
-  - name: fetch
+  - name: fetch repo
     image: docker:git
     commands:
       - git fetch --tags
   
-  - name: publish
+  - name: publish image
     image: plugins/docker:17.12
     settings:
       repo: lotteryjs/lotteryjs.com
@@ -21,7 +21,7 @@ steps:
       password:
         from_secret: docker_password
         
-  - name: scp
+  - name: scp docker-compose.yml
     image: appleboy/drone-scp
     settings:
       host:
@@ -35,7 +35,7 @@ steps:
       target: /data/wwwroot/lotteryjs
       source: docker-compose.yml
 
-  - name: ssh
+  - name: restart container
     image: appleboy/drone-ssh
     pull: true
     settings:
@@ -48,6 +48,7 @@ steps:
       password:
         from_secret: password
       script:
+        - cd /data/wwwroot/lotteryjs
         - docker-compose pull lotteryjs.com
         - docker-compose up -d --force-recreate --no-deps lotteryjs.com
   
