@@ -2,6 +2,6 @@
 
 > 这里或许有些有趣的东西。
 
-### Demo
+### DEMO
 
 * [react-slots](https://github.com/lotteryjs/react-slots)
