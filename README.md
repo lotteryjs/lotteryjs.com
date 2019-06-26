@@ -5,5 +5,5 @@
 #### Website
   
   - [ ] 迁移到新服务器
-  - [ ] SSR
+  - [ ] 使用 [docs-ssr](https://github.com/lotteryjs/docs-ssr)
 
