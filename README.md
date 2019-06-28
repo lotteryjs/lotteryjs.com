@@ -4,7 +4,7 @@
 
 #### 服务器
   
-  一台阿里云ECS(Ubuntu 18.04)
+  这里是一台阿里云ECS(Ubuntu 18.04)
 
 #### Docker 安装
 
