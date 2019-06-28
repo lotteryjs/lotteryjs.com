@@ -4,7 +4,7 @@
   "docs": {
     "name": "Lottery-JS",
     "repo": "lotteryjs/lotteryjs.com",
-    "basePath": "https://raw.githubusercontent.com/lotteryjs/docsify.lotteryjs.com/master/",
+    "basePath": "https://raw.githubusercontent.com/lotteryjs/lotteryjs.com/master/docs/",
     "auto2top": true
   }
 }
