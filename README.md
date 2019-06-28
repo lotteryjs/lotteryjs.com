@@ -26,3 +26,10 @@
 #### Traefik 安装
 
   [Let's Encrypt & Docker](https://docs.traefik.io/user-guide/docker-and-lets-encrypt/)
+
+#### 启动站点
+
+  ```sh
+  cd ssr
+  docker-compose up -d
+  ```
