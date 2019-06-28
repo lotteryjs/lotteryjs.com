@@ -25,9 +25,14 @@
 
 #### Traefik 安装
 
+  因为我这台机器要挂多个站，所以用它做一下反向代理。
+
+  ![Traefik](https://github.com/containous/traefik/raw/master/docs/content/assets/img/traefik-architecture.png)
+
   [Let's Encrypt & Docker](https://docs.traefik.io/user-guide/docker-and-lets-encrypt/)
 
   taefik.toml 里面的域名修改为你自己的
+
 
 #### 启动站点
 
