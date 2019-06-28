@@ -1,10 +1,12 @@
 ## 这是一个完全开源的站点 
 
-### 站点搭建
+### 站点运行环境搭建
 
-1. 一台阿里云ECS
+#### 服务器
+  
+  一台阿里云ECS(Ubuntu 18.04)
 
-2. Docker
+#### Docker
 
   [Get Docker CE for Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
