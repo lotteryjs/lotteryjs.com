@@ -8,6 +8,10 @@
 
 #### Docker 安装
 
+  ```sh
+  screen -S website #如果网路出现中断，可以执行命令`screen -R website`重新连接安装窗口
+  ```
+
   [Get Docker CE for Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
 
