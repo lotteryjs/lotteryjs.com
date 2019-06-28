@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  lotteryjs.com:
+    image: lotteryjs/docs-ssr
+    restart: always
+    networks:
+      - web
+    volumes:
+      - ./pm2.json:/data/site/pm2.json
+      - ./config.json:/data/site/config.json
+      - ./template.html:/data/site/template.html
+    logging:
+      options:
+        max-size: "100k"
+        max-file: "3"
+    labels:
+      - "traefik.docker.network=web"
+      - "traefik.enable=true"
+      - "traefik.basic.frontend.rule=Host:lotteryjs.com"
+      - "traefik.basic.port=4000"
+      - "traefik.basic.protocol=http"
+networks:
+  web:
+    external: true

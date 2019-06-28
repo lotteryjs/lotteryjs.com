@@ -1,0 +1,10 @@
+{
+  "template": "template.html",
+  "maxAge": 60, 
+  "docs": {
+    "name": "Lottery-JS",
+    "repo": "lotteryjs/lotteryjs.com",
+    "basePath": "https://raw.githubusercontent.com/lotteryjs/docsify.lotteryjs.com/master/",
+    "auto2top": true
+  }
+}
