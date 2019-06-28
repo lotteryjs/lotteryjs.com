@@ -30,6 +30,7 @@
 #### 启动站点
 
   ```sh
+  git clone https://github.com/lotteryjs/lotteryjs.com.git
   cd ssr
   docker-compose up -d
   ```
