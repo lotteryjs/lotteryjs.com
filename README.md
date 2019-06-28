@@ -27,10 +27,13 @@
 
   [Let's Encrypt & Docker](https://docs.traefik.io/user-guide/docker-and-lets-encrypt/)
 
+  taefik.toml 里面的域名修改为你自己的
+
 #### 启动站点
 
   ```sh
   git clone https://github.com/lotteryjs/lotteryjs.com.git
   cd ssr
+  # ssr/docker-compose.yml 里面的域名(Host:lotteryjs.com)修改为你自己的
   docker-compose up -d
   ```
