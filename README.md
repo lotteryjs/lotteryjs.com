@@ -14,6 +14,11 @@
 
   [Get Docker CE for Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
+  检验一下是否安装成功
+  ```sh
+  sudo docker run hello-world
+  ```
+
 
 
 #### 
