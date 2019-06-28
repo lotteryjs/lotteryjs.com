@@ -2,9 +2,12 @@
 
 ### 站点搭建
 
-1. 购买 ECS
+1. 一台阿里云ECS
 
-2. 
+2. Docker
+
+  [Get Docker CE for Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+
 
 
 #### 
