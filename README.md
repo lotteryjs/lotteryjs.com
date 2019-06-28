@@ -1,9 +1,10 @@
-## [https://lotteryjs.com](https://lotteryjs.com) `这里或许有些你感兴趣的东西😝`
+## 这是一个完全开源的站点 
 
-### To-Do Lists
+### 站点搭建
 
-#### Website
-  
-  - [ ] 迁移到新服务器
-  - [ ] 使用 [docs-ssr](https://github.com/lotteryjs/docs-ssr)
+1. 购买 ECS
 
+2. 
+
+
+#### 
