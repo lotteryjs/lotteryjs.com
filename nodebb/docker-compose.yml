@@ -2,15 +2,10 @@ version: '3'
 
 services:
   lotteryjs.com:
-    image: lotteryjs/docs-ssr
+    image: nodebb/docker
     restart: always
     networks:
       - web
-    volumes:
-      - ./pm2.json:/data/site/pm2.json
-      - ./config.json:/data/site/config.json
-      - ./template.html:/data/site/template.html
-      - ./static:/data/site/docs/static
     logging:
       options:
         max-size: "100k"
@@ -19,7 +14,7 @@ services:
       - "traefik.docker.network=web"
       - "traefik.enable=true"
       - "traefik.basic.frontend.rule=Host:lotteryjs.com"
-      - "traefik.basic.port=4000"
+      - "traefik.basic.port=4567"
       - "traefik.basic.protocol=http"
 networks:
   web:
