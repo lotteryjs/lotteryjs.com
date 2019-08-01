@@ -2,7 +2,7 @@ version: '3'
 
 services:
   lotteryjs.com:
-    image: .
+    build: .
     restart: always
     networks:
       - web
