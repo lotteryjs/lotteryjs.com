@@ -6,6 +6,8 @@ services:
     restart: always
     networks:
       - web
+    volumes:
+      - ./site/:/usr/src/app/
     logging:
       options:
         max-size: "100k"
