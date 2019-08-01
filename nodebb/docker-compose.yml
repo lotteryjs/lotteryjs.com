@@ -2,12 +2,12 @@ version: '3'
 
 services:
   lotteryjs.com:
-    image: nodebb/docker
+    image: .
     restart: always
     networks:
       - web
     volumes:
-      - ./app:/usr/src/app
+      - ./NodeBB-1.12.2:/usr/src/app
     logging:
       options:
         max-size: "100k"
