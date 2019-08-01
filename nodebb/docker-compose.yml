@@ -7,7 +7,7 @@ services:
     networks:
       - web
     volumes:
-      - .:/usr/src/app
+      - ./app:/usr/src/app
     logging:
       options:
         max-size: "100k"
